@@ -30,7 +30,7 @@ python -m unittest
 ## Team
 
 <!-- Add yourself here on your Git lesson: - Your Name (role) -->
-- Timothy(Working on best streak)
+- Timothy (Working on best streak)
 - (your squad will add themselves here)
 
 ## Where to start
