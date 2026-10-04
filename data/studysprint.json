@@ -1,0 +1,14 @@
+{
+  "deck_name": "Python Basics",
+  "cards": [
+    {"id": 1, "question": "What keyword starts a function definition?", "answer": "def", "category": "syntax"},
+    {"id": 2, "question": "What type does len() return?", "answer": "int", "category": "types"},
+    {"id": 3, "question": "Which loop repeats while a condition is true?", "answer": "while", "category": "syntax"},
+    {"id": 4, "question": "What symbol starts a comment in Python?", "answer": "#", "category": "syntax"},
+    {"id": 5, "question": "What list method adds an item to the end?", "answer": "append", "category": "lists"},
+    {"id": 6, "question": "What keyword sends a value back from a function?", "answer": "return", "category": "syntax"},
+    {"id": 7, "question": "What data type is 3.14?", "answer": "float", "category": "types"},
+    {"id": 8, "question": "What built-in function reads keyboard input?", "answer": "input", "category": "io"}
+  ],
+  "history": [5, 6, 4]
+}
