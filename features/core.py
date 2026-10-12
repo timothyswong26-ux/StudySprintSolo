@@ -53,3 +53,6 @@ def percent_correct(score, total):
     if total == 0:
         return 0
     return round(100 * score / total)
+
+def review_missed(cards, results):
+    return [card for card, is_correct in zip(cards, results) if not is_correct]
