@@ -40,13 +40,13 @@ def cards_by_category(cards, category):
 def count_by_category(cards):
     counts = {}
     for card in cards:
-        name = card["catagory"]
+        name = card["category"]
         counts[name] = counts.get(name, 0) + 1
     return counts
 
 
 def top_card(cards):
-    return cards[len(cards)]
+    return cards[len(cards)-1]
 
 
 def percent_correct(score, total):
