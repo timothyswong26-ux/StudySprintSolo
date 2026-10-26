@@ -3,6 +3,7 @@
 import unittest
 
 from features import core
+from features import reports
 
 
 class TestCore(unittest.TestCase):
@@ -16,6 +17,15 @@ class TestCore(unittest.TestCase):
         card = core.add_card(data, "New question?", "yes")
         self.assertEqual(card["id"], 2)
         self.assertEqual(len(data["cards"]), 2)
+    def test_average_score_with_data(self):
+        data = {"history": [5, 6, 4]}
+        result = reports.average_score(data)
+        self.assertEqual(result, 5.0)
+    
+    def test_average_score_empty_history(self):
+        data = {"history": []}
+        result = reports.average_score(data)
+        self.assertEqual(result, 0.0)
 
 
 if __name__ == "__main__":
