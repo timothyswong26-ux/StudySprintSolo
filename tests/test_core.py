@@ -16,6 +16,25 @@ class TestCore(unittest.TestCase):
         card = core.add_card(data, "New question?", "yes")
         self.assertEqual(card["id"], 2)
         self.assertEqual(len(data["cards"]), 2)
+    def category_report(data):
+        report = {}
+        cards = []
+        if isinstance(data, dict):
+            cards = data.get("cards", [])
+        elif isinstance(data, list):
+            cards = data
+
+        if not cards:
+            return report
+
+        for card in cards:
+            if isinstance(card, dict):
+                category = card.get("category", "Uncategorized")
+            else:
+                category = getattr(card, "category", "Uncategorized")
+                
+            report[category] = report.get(category, 0) + 1
+        return report
 
 
 if __name__ == "__main__":
