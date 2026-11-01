@@ -14,3 +14,13 @@ def category_report(data):
     # For now this returns an empty report so the menu never crashes.
     report = {}
     return report
+    if not data:
+        return report
+    for card in data:
+        if isinstance(card, dict):
+            category = card.get("category", "Uncategorized")
+        else:
+            category = getattr(card, "category", "Uncategorized")
+            
+        report[category] = report.get(category, 0) + 1
+    return report
